@@ -23,9 +23,14 @@ public class EnemyAutoSpawn : MonoBehaviour
     // 최대 시간
     float maxTime = 5f;
 
-    float Start()
+    float resetCreateTime()
     {
         return createTime = UnityEngine.Random.Range(minTime, maxTime + 1);
+    }
+
+    void Start()
+    {
+        createTime = UnityEngine.Random.Range(minTime, maxTime + 1);
     }
 
     // 적 공장
@@ -51,7 +56,7 @@ public class EnemyAutoSpawn : MonoBehaviour
             currentTime = 0;
 
             // 적이 생성된 후 생성 시간 다시 설정
-            createTime = Start();
+            createTime = resetCreateTime();
         }
     }
 }
