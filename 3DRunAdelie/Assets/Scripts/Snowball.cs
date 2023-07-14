@@ -1,12 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// 스노우볼 움직임
+// 스노우볼
+// 아래로 움직임
+// 부딪히면 충돌
+
 public class Snowball : MonoBehaviour
 {
 
     // 속도
     public float speed = 10f;
+
+    // 충돌 시작
+    private void OnCollisionEnter(Collision collision)
+    {
+        // 상대 죽고
+        Destroy(collision.gameObject);
+
+        // 나 죽고
+        Destroy(gameObject);
+    }
+
+
 
     // Start is called before the first frame update
     void Start()
