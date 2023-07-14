@@ -5,7 +5,7 @@ using UnityEngine;
 
 // 시간이 흐르면
 // 해당 위치에
-// 적을 스폰하고
+// 적을 스폰하고 (랜덤 시간)
 // 내 위치 추적 or 아래로 떨어진다.
 
 public class EnemyAutoSpawn : MonoBehaviour
@@ -14,18 +14,24 @@ public class EnemyAutoSpawn : MonoBehaviour
     // 현재 시간
     float currentTime;
 
-    // 일정 시간
-    public float createTime = 1;
+    // 생성 시간
+    float createTime;
+
+    // 최소 시간
+    float minTime = 1f;
+
+    // 최대 시간
+    float maxTime = 5f;
+
+    float Start()
+    {
+        return createTime = UnityEngine.Random.Range(minTime, maxTime + 1);
+    }
 
     // 적 공장
     public GameObject enemyFactory;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +49,9 @@ public class EnemyAutoSpawn : MonoBehaviour
 
             // 현재시간 0으로 초기화
             currentTime = 0;
+
+            // 적이 생성된 후 생성 시간 다시 설정
+            createTime = Start();
         }
     }
 }
