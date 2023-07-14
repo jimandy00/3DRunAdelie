@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 182426087}
   - component: {fileID: 182426086}
   - component: {fileID: 182426085}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DestroyZone (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 639802980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FirePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -635,7 +635,7 @@ GameObject:
   - component: {fileID: 985005677}
   - component: {fileID: 985005676}
   - component: {fileID: 985005675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DestroyZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +781,7 @@ GameObject:
   - component: {fileID: 1107594658}
   - component: {fileID: 1107594657}
   - component: {fileID: 1107594656}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DestroyZone (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1017,7 +1017,7 @@ GameObject:
   - component: {fileID: 2001807046}
   - component: {fileID: 2001807045}
   - component: {fileID: 2001807044}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DestroyZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 2135638944}
   - component: {fileID: 2135638950}
   - component: {fileID: 2135638949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
