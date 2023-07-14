@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // 스노우볼
-// 아래로 움직임
+// 위로 움직임
 // 부딪히면 충돌
 
 public class Snowball : MonoBehaviour
