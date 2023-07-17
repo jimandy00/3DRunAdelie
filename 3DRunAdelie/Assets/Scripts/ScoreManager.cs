@@ -23,7 +23,11 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // 목표 최고점수를 불러와서 화면에 출력
+        // 1. 최고 점수 불러와서 bestScore에 대입
+        bestScore = PlayerPrefs.GetInt("Best Score", 0);
+        // 2. 최고 점수 화면에 표시
+        bestScoreUI.text = "최고점수 : " + bestScore;
     }
 
     // Update is called once per frame
