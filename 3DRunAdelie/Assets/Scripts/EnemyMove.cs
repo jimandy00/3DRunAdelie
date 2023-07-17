@@ -35,6 +35,14 @@ public class EnemyMove : MonoBehaviour
         scoreManager.currentScore++;
         // 점수 표시
         scoreManager.currentScoreUI.text = "현재점수 : " + scoreManager.currentScore;
+
+        // 최고 점수 표시
+        if (scoreManager.currentScore > scoreManager.bestScore)
+        {
+            scoreManager.bestScore = scoreManager.currentScore;
+
+            scoreManager.bestScoreUI.text = "최고점수 : " + scoreManager.bestScore;
+        }
     }
 
     // Start is called before the first frame update
