@@ -14,6 +14,12 @@ public class ScoreManager : MonoBehaviour
     // 현재 점수
     public int currentScore;
 
+    // 최고 점수 UI
+    public Text bestScoreUI;
+
+    // 최고 점수
+    public int bestScore;
+
     // Start is called before the first frame update
     void Start()
     {
