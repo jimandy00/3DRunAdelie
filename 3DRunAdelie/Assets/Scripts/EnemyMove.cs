@@ -42,6 +42,12 @@ public class EnemyMove : MonoBehaviour
             scoreManager.bestScore = scoreManager.currentScore;
 
             scoreManager.bestScoreUI.text = "최고점수 : " + scoreManager.bestScore;
+
+            // 서버에 저장
+            PlayerPrefs.SetInt("Best Score", scoreManager.bestScore);
+
+           
+           
         }
     }
 
