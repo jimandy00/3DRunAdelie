@@ -31,25 +31,15 @@ public class EnemyMove : MonoBehaviour
         GameObject smObject = GameObject.Find("ScoreManager");
         // GameObjact에 있는 컴포넌트 가져오기
         ScoreManager scoreManager = smObject.GetComponent<ScoreManager>();
-        // 값 할당
-        scoreManager.currentScore++;
-        // 점수 표시
-        scoreManager.currentScoreUI.text = "현재점수 : " + scoreManager.currentScore;
 
-        // 최고 점수 표시
-        if (scoreManager.currentScore > scoreManager.bestScore)
-        {
-            scoreManager.bestScore = scoreManager.currentScore;
-
-            scoreManager.bestScoreUI.text = "최고점수 : " + scoreManager.bestScore;
-
-            // 서버에 저장
-            PlayerPrefs.SetInt("Best Score", scoreManager.bestScore);
+        scoreManager.setScore(scoreManager.getScore() + 1);
+        
+        
 
            
            
         }
-    }
+    
 
     // Start is called before the first frame update
     void Start()

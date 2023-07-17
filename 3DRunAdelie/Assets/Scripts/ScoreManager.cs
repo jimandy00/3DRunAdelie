@@ -12,13 +12,38 @@ public class ScoreManager : MonoBehaviour
     public Text currentScoreUI;
 
     // 현재 점수
-    public int currentScore;
+    private int currentScore;
 
     // 최고 점수 UI
     public Text bestScoreUI;
 
     // 최고 점수
-    public int bestScore;
+    private int bestScore;
+
+    // currentScore에 값 넣고 화면에 표시
+    public void setScore(int value)
+    {
+        // 값 할당
+        currentScore = value;
+        // 점수 표시
+        currentScoreUI.text = "현재점수 : " + currentScore;
+
+        // 최고 점수 표시
+        if (currentScore > bestScore)
+        {
+            bestScore = currentScore;
+
+            bestScoreUI.text = "최고점수 : " + bestScore;
+
+            // 서버에 저장
+            PlayerPrefs.SetInt("Best Score", bestScore);
+        }
+    }
+
+    public int getScore()
+    {
+        return currentScore;
+    }
 
     // Start is called before the first frame update
     void Start()
