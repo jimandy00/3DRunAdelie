@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 // enemy 이동
 // 30% 확률로 플레이어 방향으로 돌격
 // 공격에 닿으면 폭발
@@ -24,6 +25,16 @@ public class EnemyMove : MonoBehaviour
 
         Destroy(collision.gameObject);
         Destroy(gameObject);
+
+        // 적이 죽으면 점수 증가
+        // Scene에서 GameObjact 가져오기
+        GameObject smObject = GameObject.Find("ScoreManager");
+        // GameObjact에 있는 컴포넌트 가져오기
+        ScoreManager scoreManager = smObject.GetComponent<ScoreManager>();
+        // 값 할당
+        scoreManager.currentScore++;
+        // 점수 표시
+        scoreManager.currentScoreUI.text = "현재점수 : " + scoreManager.currentScore;
     }
 
     // Start is called before the first frame update
